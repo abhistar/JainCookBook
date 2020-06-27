@@ -4,6 +4,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<style>
 		body{
@@ -16,13 +19,30 @@
 		.opaque-light{
 			opacity: 0.8;
 		}
+		.opaque-heavy{
+			opacity: 1;
+		}
+		.container-iframe{
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			padding-top: 56.25%;
+		}
+		.responsive-iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
 	</style>
 	<title>Welcome to Jain CoookBook</title>
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.html"><img src="images/logo.png" width="40" height="40" alt="">
-		</a>
+		<a class="navbar-brand" href="index.html"><img src="images/logo.png" width="40" height="40" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			 <span class="navbar-toggler-icon"></span>
   		</button>
@@ -40,12 +60,26 @@
 	      	</ul>
       	</div>
 	</nav>
-	<div class="overflow-hidden p-3 p-md-4 m-md-3 text-center bg-light opaque-light">
-		<div class="col-md-5 p-lg-5 mx-auto my-5">
-	    	<h1 class="display-4 font-weight-normal">Welcome to Jain CookBook</h1>
-	    	<p class="lead font-weight-normal">Sharing some great recipes from around the world. Some original ones and some with a delicious twist.<br>All vegetarian!</p>
+
+	<div class="container">
+  		<div class="card border-0 shadow my-5 opaque-light">
+		    <div class="card-body p-5">
+		      <h1 class="font-weight-normal">Welcome to Jain CoookBook</h1>
+		      <p class="lead">Sharing some great recipes from around the world. Some original ones and some with a delicious twist.<br>All vegetarian!</p>
+		    </div>
 	  	</div>
 	</div>
-	<h1></h1>
+
+	<div class="container">
+  		<div class="card border-0 shadow my-5 opaque-heavy">
+		    <div class="card-body p-5">
+		      <h1 class="font-weight-normal">Our Latest Recipe!</h1>
+		      <p class="lead">How to make a chocolate brownie | Eggless brownie</p>
+		      <div class="container-iframe">
+		      	<iframe class="responsive-iframe" src="https://www.youtube.com/embed/mhz0OXNBZkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		      </div>
+		    </div>
+	  	</div>
+	</div>
 </body>
 </html>
